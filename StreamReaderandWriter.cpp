@@ -19,3 +19,23 @@ int main()
     //unlimited loop untuk menulis file
     while (true)
     {
+        
+        cout << "- ";
+        //mendapat setiap karakter dalam satu baris
+        getline(cin, baris);
+        //kondisi false jika baris hanya berisi karakter q
+        if (baris == "q") break;
+        //menulis dan memasukkan nilai dari variabel baris ke dalam file
+        outfile << baris << endl;
+        
+    }
+    //menutup file setelah penulisan selesai
+    outfile.close();
+    
+    //membuka file dalam mode membaca
+    ifstream infile;
+    //menunjuk ke sebuah file
+    infile.open("contohfile.txt");
+    
+    cout << endl << ">=Membuka dan membaca file " << endl;
+    //kondisi jika file ada
